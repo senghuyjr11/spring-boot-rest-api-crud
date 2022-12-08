@@ -1,19 +1,24 @@
 package com.example.springbootrestapicrud.controller;
 
-import com.example.springbootrestapicrud.domain.Book;
-import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
+import com.example.springbootrestapicrud.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/v1/book")
 public class BookController {
+    private BookService bookService;
+    @Autowired
+    void setBookService(BookService bookService) {
+        this.bookService = bookService;
+    }
+
     @PostMapping
-    private Book create(@RequestBody Book book) {
-        book.setId(1);
-        book.setTitle("Kotlin");
-        book.setCreatedDate(LocalDate.now());
-        book.setModifiedDate(LocalDate.now());
-        return book;
+    public ResponseEntity<?> addNewBook(@RequestParam String bookRequest) {
+        return bookService.addNewBook(bookRequest);
     }
 }

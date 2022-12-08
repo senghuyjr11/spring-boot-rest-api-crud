@@ -1,26 +1,31 @@
 package com.example.springbootrestapicrud.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity(name = "book")
-@Setter
-@Getter
-@AllArgsConstructor
 @NoArgsConstructor
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String title;
-    private LocalDate createdDate;
-    private LocalDate modifiedDate;
+    public Integer id;
+    public String title;
+    public LocalDate createdDate;
+    public LocalDate modifiedDate;
+    @Builder
+    public Book(int id, String title, LocalDate createdDate, LocalDate modifiedDate) {
+        this.id = id;
+        this.title = title;
+        this.createdDate = createdDate;
+        this.modifiedDate = modifiedDate;
+    }
 }
