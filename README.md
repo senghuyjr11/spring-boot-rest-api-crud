@@ -3,7 +3,7 @@ Restful API Crud with Gradle
 
 # Getting Started
 * http://localhost:8080/swagger-ui.html
-  ![image](https://user-images.githubusercontent.com/42228504/201375276-466aae63-30c1-4c26-8a12-a7f3e486e2ce.png)
+  ![image](![image](https://user-images.githubusercontent.com/42228504/206391548-a09d6cd6-4790-4527-bb5f-84fd6967f973.png))
 
 ### Reference Documentation
 
