@@ -1,31 +1,91 @@
-# spring-boot-rest-api-crud
-Restful API Crud with Gradle
+# Spring Boot REST API CRUD
 
-# Getting Started
-* http://localhost:8080/swagger-ui.html
-  ![image](https://user-images.githubusercontent.com/42228504/206391548-a09d6cd6-4790-4527-bb5f-84fd6967f973.png)
+This repository provides a simple RESTful API for CRUD (Create, Read, Update, Delete) operations using Spring Boot and Gradle. It is designed as a foundational example for building and managing RESTful web services in Java.
 
-### Reference Documentation
+## Features
 
-For further reference, please consider the following sections:
+- **Full CRUD Operations:** Easily create, retrieve, update, and delete data via REST endpoints.
+- **Spring Boot:** Leverages Spring Boot for rapid development and simplified configuration.
+- **Gradle:** Uses Gradle for build automation and dependency management.
+- **Java:** Fully implemented in Java for robust and scalable web services.
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.5/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.5/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#web)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#using.devtools)
-* [Spring Configuration Processor](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#appendix.configuration-metadata.annotation-processor)
+## Technologies Used
 
-### Guides
+- Java (100%)
+- Spring Boot
+- Gradle
 
-The following guides illustrate how to use some features concretely:
+## Getting Started
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring Clean Architecture](https://www.baeldung.com/spring-boot-clean-architecture)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+### Prerequisites
 
-### Additional Links
+- Java 11 or above
+- Gradle
+- Git
 
-These additional references should also help you:
+### Installation
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/senghuyjr11/spring-boot-rest-api-crud.git
+    cd spring-boot-rest-api-crud
+    ```
+
+2. **Build the project:**
+
+    ```bash
+    ./gradlew build
+    ```
+
+3. **Run the application:**
+
+    ```bash
+    ./gradlew bootRun
+    ```
+
+4. **Access the API:**
+
+    The API will be available at `http://localhost:8080/` (default port).
+
+## Usage
+
+- Interact with the API using tools like [Postman](https://www.postman.com/) or `curl`.
+- Typical endpoints include:
+    - `GET /items` - Retrieve all items
+    - `POST /items` - Create a new item
+    - `GET /items/{id}` - Get item by ID
+    - `PUT /items/{id}` - Update item by ID
+    - `DELETE /items/{id}` - Delete item by ID
+
+Check the source code or controller classes for the exact endpoint paths.
+
+## Project Structure
+
+```
+spring-boot-rest-api-crud/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/          # Java source code
+│   │   └── resources/     # Application configuration
+├── build.gradle           # Gradle build file
+├── settings.gradle        # Gradle settings
+└── README.md              # Project documentation
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests for improvements or new features.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Maintainer: [senghuyjr11](https://github.com/senghuyjr11)
+
+---
+
+Feel free to reach out if you have any questions or suggestions!
